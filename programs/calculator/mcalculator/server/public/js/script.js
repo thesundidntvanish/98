@@ -7,7 +7,7 @@ function initialise() {
         }
         document.querySelector('#display > #primary').innerHTML = displayStr;
     }
-    window.setExpressionDisplay = function setExpresionDisplayOverThePrimaryOne(displayStr) {
+    window.setExpressionDisplay = function setExpressionDisplayOverThePrimaryOne(displayStr) {
         this.document.querySelector('#display > #expression').textContent = displayStr;
     }
     window.Module._load(); //TODO try to asyncify it
@@ -20,7 +20,7 @@ function initialise() {
         '/': '91', 'Divide': '91',
         '*': '92', 'Multiply': '92',
         '+': '93', 'Add': '93',
-        '-': '94', 'Suntract': '94',
+        '-': '94', 'Subtract': '94',
         '%': '118',
         '=': '121', 'Enter': '121',
         '0': '130',
@@ -66,7 +66,7 @@ function initialise() {
      * History and Memory unveiling in compact mode
      */
 
-    let sidebarUp = 0; //maybe stayes in closure or something
+    let sidebarUp = 0; //maybe stays in closure or something
     window.sidebarDown = function lowersTheSidebarToInitialState() {
         let sidebar = this.document.querySelector('#sidebar');
         sidebar.style.transform = 'translateY(0)';
