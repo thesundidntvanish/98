@@ -63,7 +63,7 @@ var menus = {
 			item: "&About Calculator",
 			action: function(){
 				// TODO: about dialog
-				window.open("https://github.com/unoplatform/calculator");
+				// window.open("");
 			},
 		}
 	],
