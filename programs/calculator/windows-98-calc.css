@@ -154,35 +154,6 @@ button.disabled:focus {
   height: 100%;
   width: 25%;
 }
-#inp button:focus {
-  /* background-color: transparent; */
-}
-#inp button.w {
-  /* background-color: rgb(255, 255, 255); */
-}
-
-#inp button.w.b {
-  font-weight: 600;
-  font-size: 1.2em;
-}
-/* #inp button.w.b:focus {
-  background-color: rgb(255, 255, 255);
-}
-#inp button.p {
-  background-color: rgba(230, 134, 150, 0.678);
-}
-#inp button.p:hover {
-  background-color: rgb(230, 134, 150);
-}
-#inp button.p:focus {
-  background-color: rgba(230, 134, 150, 0.678);
-}
-#inp button.w:hover {
-  background-color: rgb(215, 220, 226);
-}
-#inp button.w:focus {
-  background-color: rgb(255, 255, 255);
-} */
 
 #sidebar {
   height: 100%;
