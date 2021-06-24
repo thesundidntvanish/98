@@ -186,7 +186,7 @@ function initialise() {
         panel.prepend(hItem);
 
     }
-    window.clearHistory = function clearHistoryOfEngineAndclearPanel() {
+    window.clearHistory = function clearHistoryOfEngineAndClearPanel() {
         this.window.Module._clearHs();
         let panel = this.document.querySelector('#panel .hspanel');
         removeFrom(panel, "button.history-item");
