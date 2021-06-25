@@ -352,6 +352,9 @@ function initialise() {
 
             btn.click();
         }
+        if (ev.key === "c" && (ev.ctrlKey || ev.metaKey) && !ev.shiftKey && !ev.altKey) {
+            copyResult();
+        }
     })
     /**
     * Sidebar navigation // please rewrite this shitty code better
@@ -467,6 +470,10 @@ function initialise() {
             btn.classList.add('disabled');
             btn.addEventListener('click', ev => ev);//do nothing on click
         });
+    }
+
+    window.copyResult = function() {
+        navigator.clipboard.writeText(document.querySelector('#display > #primary').value);
     }
 
     function filterOut(button) {

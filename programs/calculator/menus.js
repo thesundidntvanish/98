@@ -17,10 +17,9 @@ var menus = {
 	"&Edit": [
 		{
 			item: "&Copy",
-			shortcut: "Ctrl+C", // TODO
-			enabled: false,
+			shortcut: "Ctrl+C",
 			action: () => {
-				// TODO
+				copyResult();
 			},
 		},
 		{
