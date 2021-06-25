@@ -1,5 +1,5 @@
 function initialise() {
-    window.setPrimaryDisplay = function setPrrimaryDisplayToBeCalledFromEngineWithDisplayString(displayStr) {
+    window.setPrimaryDisplay = function setPrimaryDisplayToBeCalledFromEngineWithDisplayString(displayStr) {
         //fix for Ove<br>flow
         if (!displayStr === 'Overflow') /*TODO add some other cases*/ {
             displayStr = displayStr.replace("e", "e<br>");
