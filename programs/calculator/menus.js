@@ -18,16 +18,21 @@ var menus = {
 		{
 			item: "&Copy",
 			shortcut: "Ctrl+C",
+			enabled: () => {
+				return !!navigator.clipboard.writeText;
+			},
 			action: () => {
 				copyResult();
 			},
 		},
 		{
 			item: "&Paste",
-			shortcut: "Ctrl+V", // TODO
-			enabled: false,
+			shortcut: "Ctrl+V",
+			enabled: () => {
+				return navigator.clipboard.readText && document.queryCommandEnabled("Paste");
+			},
 			action: () => {
-				// TODO
+				pasteResult();
 			},
 		},
 	],

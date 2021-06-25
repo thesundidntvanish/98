@@ -352,8 +352,12 @@ function initialise() {
 
             btn.click();
         }
-        if (ev.key === "c" && (ev.ctrlKey || ev.metaKey) && !ev.shiftKey && !ev.altKey) {
-            copyResult();
+        if ((ev.ctrlKey || ev.metaKey) && !ev.shiftKey && !ev.altKey) {
+            if (ev.key === "c") {
+                copyResult();
+            } else if (ev.key === "v") {
+                pasteResult();
+            }
         }
     })
     /**
@@ -473,7 +477,24 @@ function initialise() {
     }
 
     window.copyResult = function() {
-        navigator.clipboard.writeText(document.querySelector('#display > #primary').value);
+        navigator.clipboard.writeText(document.querySelector('#display > #primary').value)
+            .catch((error) => {
+                alert("Failed to copy to clipboard.\n\n" + error);
+            });
+    }
+    window.pasteResult = function() {
+        navigator.clipboard.readText().then((text) => {
+            sendCommand(commandIDs.CommandCENTR);
+            for (const char of text) {
+                if (char === ".") {
+                    sendCommand(commandIDs.CommandPNT);
+                } else if (chart.match(/\d/)) {
+                    sendCommand(commandIDs[`Command${char}`]);
+                }
+            }
+        }, (error) => {
+            alert("Failed to paste.\n\n" + error);
+        });
     }
 
     function filterOut(button) {
