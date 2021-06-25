@@ -31,7 +31,7 @@
             document.querySelector(".splash").style.display = "none";
         }
     </script>
-    <!--TODO: is there a race condition where script.js loads to late to define initialise for engine.js to call? or is order guaranteed even with async somehow?-->
+    <!--TODO: is there a race condition where script.js loads too late to define initialise for engine.js to call? or is order guaranteed even with async somehow?-->
     <script async src="mcalculator/server/public/js/script.js"></script>
     <script async onload="show('loading your files<br>Please wait...');"
         src="mcalculator/server/public/js/engine.js"></script>
