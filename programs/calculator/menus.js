@@ -18,6 +18,7 @@ var menus = {
 		{
 			item: "&Copy",
 			shortcut: "Ctrl+C", // TODO
+			enabled: false,
 			action: () => {
 				// TODO
 			},
@@ -25,6 +26,7 @@ var menus = {
 		{
 			item: "&Paste",
 			shortcut: "Ctrl+V", // TODO
+			enabled: false,
 			action: () => {
 				// TODO
 			},
@@ -34,10 +36,12 @@ var menus = {
 		{
 			item: "S&tandard",
 			checkbox: checkbox_for_view_mode("standard"),
+			enabled: false,
 		},
 		{
 			item: "&Scientific",
 			checkbox: checkbox_for_view_mode("scientific"),
+			enabled: false,
 		},
 	],
 	"&Help": [
@@ -63,7 +67,7 @@ var menus = {
 			item: "&About Calculator",
 			action: function(){
 				// TODO: about dialog
-				// window.open("");
+				window.open("https://github.com/muzam1l/mcalculator");
 			},
 		}
 	],
